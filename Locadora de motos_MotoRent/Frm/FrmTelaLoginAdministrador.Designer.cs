@@ -33,6 +33,7 @@
             label1 = new Label();
             label2 = new Label();
             btnContinuar = new Button();
+            btnSair = new Button();
             SuspendLayout();
             // 
             // txtUsuario
@@ -79,12 +80,23 @@
             btnContinuar.UseVisualStyleBackColor = true;
             btnContinuar.Click += btnContinuar_Click;
             // 
+            // btnSair
+            // 
+            btnSair.Location = new Point(77, 228);
+            btnSair.Name = "btnSair";
+            btnSair.Size = new Size(100, 37);
+            btnSair.TabIndex = 5;
+            btnSair.Text = "Sair";
+            btnSair.UseVisualStyleBackColor = true;
+            btnSair.Click += btnSair_Click;
+            // 
             // FrmTelaLoginAdministrador
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ActiveCaption;
             ClientSize = new Size(288, 365);
+            Controls.Add(btnSair);
             Controls.Add(btnContinuar);
             Controls.Add(label2);
             Controls.Add(label1);
@@ -103,5 +115,6 @@
         private Label label1;
         private Label label2;
         private Button btnContinuar;
+        private Button btnSair;
     }
 }

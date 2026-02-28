@@ -1,6 +1,6 @@
 ﻿namespace Locadora_de_motos_MotoRent.Frm
 {
-    partial class FrmTelaPrincipal
+    partial class FrmTelaPrincipalAdmin
     {
         /// <summary>
         /// Required designer variable.
@@ -31,8 +31,9 @@
             btnMotos = new Button();
             btnClientes = new Button();
             btnFuncionario = new Button();
-            button1 = new Button();
+            btnDevolucao = new Button();
             btnSair = new Button();
+            btnCadastrar = new Button();
             SuspendLayout();
             // 
             // btnMotos
@@ -55,7 +56,7 @@
             btnClientes.TabIndex = 1;
             btnClientes.Text = "Clientes";
             btnClientes.UseVisualStyleBackColor = false;
-           
+            btnClientes.Click += btnClientes_Click;
             // 
             // btnFuncionario
             // 
@@ -66,21 +67,23 @@
             btnFuncionario.TabIndex = 2;
             btnFuncionario.Text = "Funcionario";
             btnFuncionario.UseVisualStyleBackColor = false;
+            btnFuncionario.Click += btnFuncionario_Click;
             // 
-            // button1
+            // btnDevolucao
             // 
-            button1.BackColor = Color.Beige;
-            button1.Location = new Point(86, 281);
-            button1.Name = "button1";
-            button1.Size = new Size(180, 55);
-            button1.TabIndex = 3;
-            button1.Text = "Devolução";
-            button1.UseVisualStyleBackColor = false;
+            btnDevolucao.BackColor = Color.Beige;
+            btnDevolucao.Location = new Point(86, 281);
+            btnDevolucao.Name = "btnDevolucao";
+            btnDevolucao.Size = new Size(180, 55);
+            btnDevolucao.TabIndex = 3;
+            btnDevolucao.Text = "Devolução";
+            btnDevolucao.UseVisualStyleBackColor = false;
+            btnDevolucao.Click += btnDevolucao_Click;
             // 
             // btnSair
             // 
             btnSair.BackColor = Color.IndianRed;
-            btnSair.Location = new Point(112, 375);
+            btnSair.Location = new Point(120, 477);
             btnSair.Name = "btnSair";
             btnSair.Size = new Size(132, 42);
             btnSair.TabIndex = 4;
@@ -88,18 +91,30 @@
             btnSair.UseVisualStyleBackColor = false;
             btnSair.Click += btnSair_Click;
             // 
-            // FrmTelaPrincipal
+            // btnCadastrar
+            // 
+            btnCadastrar.BackColor = Color.Beige;
+            btnCadastrar.Location = new Point(86, 361);
+            btnCadastrar.Name = "btnCadastrar";
+            btnCadastrar.Size = new Size(180, 55);
+            btnCadastrar.TabIndex = 5;
+            btnCadastrar.Text = "Cadastrar";
+            btnCadastrar.UseVisualStyleBackColor = false;
+            btnCadastrar.Click += btnCadastrar_Click_1;
+            // 
+            // FrmTelaPrincipalAdmin
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ActiveCaption;
             ClientSize = new Size(364, 585);
+            Controls.Add(btnCadastrar);
             Controls.Add(btnSair);
-            Controls.Add(button1);
+            Controls.Add(btnDevolucao);
             Controls.Add(btnFuncionario);
             Controls.Add(btnClientes);
             Controls.Add(btnMotos);
-            Name = "FrmTelaPrincipal";
+            Name = "FrmTelaPrincipalAdmin";
             Text = "FrmTelaPrincipal";
             Load += FrmTelaPrincipal_Load;
             ResumeLayout(false);
@@ -110,7 +125,8 @@
         private Button btnMotos;
         private Button btnClientes;
         private Button btnFuncionario;
-        private Button button1;
+        private Button btnDevolucao;
         private Button btnSair;
+        private Button btnCadastrar;
     }
 }

@@ -28,22 +28,22 @@
         /// </summary>
         private void InitializeComponent()
         {
-            dataGridView1 = new DataGridView();
+            dgvClientes = new DataGridView();
             btnListar = new Button();
             btnSair = new Button();
             btnBuscar = new Button();
             btnCadastrar = new Button();
             btnExcluir = new Button();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dgvClientes).BeginInit();
             SuspendLayout();
             // 
-            // dataGridView1
+            // dgvClientes
             // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(260, 2);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.Size = new Size(240, 448);
-            dataGridView1.TabIndex = 0;
+            dgvClientes.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvClientes.Location = new Point(260, 2);
+            dgvClientes.Name = "dgvClientes";
+            dgvClientes.Size = new Size(240, 448);
+            dgvClientes.TabIndex = 0;
             // 
             // btnListar
             // 
@@ -102,16 +102,16 @@
             Controls.Add(btnBuscar);
             Controls.Add(btnSair);
             Controls.Add(btnListar);
-            Controls.Add(dataGridView1);
+            Controls.Add(dgvClientes);
             Name = "FrmClientes";
             Text = "FrmClientes";
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dgvClientes).EndInit();
             ResumeLayout(false);
         }
 
         #endregion
 
-        private DataGridView dataGridView1;
+        private DataGridView dgvClientes;
         private Button btnListar;
         private Button btnSair;
         private Button btnBuscar;

@@ -42,12 +42,16 @@
             btnExcluir = new Button();
             btnCadastrar = new Button();
             btnAtualizacao = new Button();
+            label5 = new Label();
+            label6 = new Label();
+            txtAno = new TextBox();
+            txtPreco = new TextBox();
             ((System.ComponentModel.ISupportInitialize)dgvMotos).BeginInit();
             SuspendLayout();
             // 
             // btnListar
             // 
-            btnListar.Location = new Point(9, 279);
+            btnListar.Location = new Point(18, 557);
             btnListar.Name = "btnListar";
             btnListar.Size = new Size(84, 26);
             btnListar.TabIndex = 1;
@@ -78,7 +82,7 @@
             // 
             // txtValorDiaria
             // 
-            txtValorDiaria.Location = new Point(12, 202);
+            txtValorDiaria.Location = new Point(18, 413);
             txtValorDiaria.Name = "txtValorDiaria";
             txtValorDiaria.Size = new Size(100, 23);
             txtValorDiaria.TabIndex = 5;
@@ -87,7 +91,7 @@
             // 
             cmbStatus.FormattingEnabled = true;
             cmbStatus.Items.AddRange(new object[] { "Indisponivel", "Disponivel" });
-            cmbStatus.Location = new Point(12, 241);
+            cmbStatus.Location = new Point(18, 452);
             cmbStatus.Name = "cmbStatus";
             cmbStatus.Size = new Size(121, 23);
             cmbStatus.TabIndex = 6;
@@ -95,9 +99,9 @@
             // dgvMotos
             // 
             dgvMotos.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvMotos.Location = new Point(220, 1);
+            dgvMotos.Location = new Point(219, -1);
             dgvMotos.Name = "dgvMotos";
-            dgvMotos.Size = new Size(240, 452);
+            dgvMotos.Size = new Size(240, 391);
             dgvMotos.TabIndex = 7;
             // 
             // label1
@@ -134,7 +138,7 @@
             // 
             label4.AutoSize = true;
             label4.BackColor = Color.White;
-            label4.Location = new Point(12, 184);
+            label4.Location = new Point(18, 395);
             label4.Name = "label4";
             label4.Size = new Size(69, 15);
             label4.TabIndex = 11;
@@ -142,7 +146,7 @@
             // 
             // btnExcluir
             // 
-            btnExcluir.Location = new Point(9, 311);
+            btnExcluir.Location = new Point(18, 589);
             btnExcluir.Name = "btnExcluir";
             btnExcluir.Size = new Size(84, 26);
             btnExcluir.TabIndex = 12;
@@ -151,7 +155,7 @@
             // 
             // btnCadastrar
             // 
-            btnCadastrar.Location = new Point(110, 279);
+            btnCadastrar.Location = new Point(119, 557);
             btnCadastrar.Name = "btnCadastrar";
             btnCadastrar.Size = new Size(84, 26);
             btnCadastrar.TabIndex = 13;
@@ -161,19 +165,57 @@
             // 
             // btnAtualizacao
             // 
-            btnAtualizacao.Location = new Point(110, 311);
+            btnAtualizacao.Location = new Point(119, 589);
             btnAtualizacao.Name = "btnAtualizacao";
             btnAtualizacao.Size = new Size(84, 26);
             btnAtualizacao.TabIndex = 14;
             btnAtualizacao.Text = "Atualização";
             btnAtualizacao.UseVisualStyleBackColor = true;
             // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.BackColor = Color.White;
+            label5.Location = new Point(12, 237);
+            label5.Name = "label5";
+            label5.Size = new Size(32, 15);
+            label5.TabIndex = 18;
+            label5.Text = "Ano:";
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.BackColor = Color.White;
+            label6.Location = new Point(12, 179);
+            label6.Name = "label6";
+            label6.Size = new Size(40, 15);
+            label6.TabIndex = 17;
+            label6.Text = "Preço:";
+            // 
+            // txtAno
+            // 
+            txtAno.Location = new Point(12, 255);
+            txtAno.Name = "txtAno";
+            txtAno.Size = new Size(100, 23);
+            txtAno.TabIndex = 16;
+            // 
+            // txtPreco
+            // 
+            txtPreco.Location = new Point(12, 197);
+            txtPreco.Name = "txtPreco";
+            txtPreco.Size = new Size(100, 23);
+            txtPreco.TabIndex = 15;
+            // 
             // FrmMotos
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ActiveCaption;
-            ClientSize = new Size(460, 450);
+            ClientSize = new Size(460, 627);
+            Controls.Add(label5);
+            Controls.Add(label6);
+            Controls.Add(txtAno);
+            Controls.Add(txtPreco);
             Controls.Add(btnAtualizacao);
             Controls.Add(btnCadastrar);
             Controls.Add(btnExcluir);
@@ -212,5 +254,9 @@
         private Button btnExcluir;
         private Button btnCadastrar;
         private Button btnAtualizacao;
+        private Label label5;
+        private Label label6;
+        private TextBox txtAno;
+        private TextBox txtPreco;
     }
 }

@@ -21,7 +21,7 @@ namespace Locadora_de_motos_MotoRent.Frm
         {
             if (txtUsuario.Text == "Admin" && txtSenha.Text == "1234")
             {
-                var FrmTelaPrincipal = new FrmTelaPrincipal(true, 0);
+                var FrmTelaPrincipal = new FrmTelaPrincipalAdmin(true, 0);
                 this.Hide();
                 FrmTelaPrincipal.ShowDialog();
                 this.Show();
@@ -33,6 +33,11 @@ namespace Locadora_de_motos_MotoRent.Frm
                     MessageBoxButtons.OK,
                     MessageBoxIcon.Error);
             }
+        }
+
+        private void btnSair_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

@@ -16,20 +16,18 @@ namespace Locadora_de_motos_MotoRent
             this.Show();
         }
 
-        private void btnUsuario_Click(object sender, EventArgs e, FrmTelaLoginUsuario frmTelaLoginUsuario)
-        {
-            var FrmtelaLogin = new FrmTelaLoginUsuario();
-            this.Hide();
-            frmTelaLoginUsuario.ShowDialog();
-            this.Show();
-        }
-
         private void btnUsuario_Click(object sender, EventArgs e)
         {
             var frmTelaLoginUsuario = new FrmTelaLoginUsuario();
             this.Hide();
             frmTelaLoginUsuario.ShowDialog();
             this.Show();
+        }
+
+        private void btnFechar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+
         }
     }
 }

@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Locadora_de_motos_MotoRent.Banco.Repositories;
 using Locadora_de_motos_MotoRent.Modelo;
+using System.Collections.Generic;
 
 namespace Locadora_de_motos_MotoRent.Frm
 {
@@ -102,18 +103,6 @@ namespace Locadora_de_motos_MotoRent.Frm
                 Preco = double.Parse(txtPreco.Text)
             };
 
-            // Exemplo: adicionando a uma lista em memória
-            listaMotos.Add(moto);
-
-            MessageBox.Show("Moto cadastrada com sucesso!");
-
-            // Limpar campos
-            txtMarca.Clear();
-            txtModelo.Clear();
-            txtAno.Clear();
-            txtPreco.Clear();
-
-            txtMarca.Focus();
         }
     }
 }
