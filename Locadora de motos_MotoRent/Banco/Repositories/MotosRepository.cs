@@ -32,20 +32,20 @@ namespace Locadora_de_motos_MotoRent.Banco.Repositories
             using var conexao = conexaoBanco.CriarConexao();
 
             return await conexao.QueryFirstOrDefaultAsync<Moto>(
-                @"SELECT 
-                    Id,
-                    Marca,
-                    Modelo,
-                    Ano,
-                    Placa,
-                    Categoria,
-                    ValorDiaria,
-                    Status,
-                    DataCadastro,
-                    DataAtualizacao
-                  FROM Motos
-                  WHERE Id = @Id",
-                new { Id = idMoto });
+               @"SELECT 
+                      Id,
+                      Marca,
+                      Modelo,
+                      Ano,
+                      Placa,
+                      Categoria,
+                      ValorDiaria,
+                      Status,
+                      DataCadastro,
+                      DataAtualizacao
+                      FROM Motos
+                     WHERE Id = @Id",
+                new { Id = idMoto });   
         }
 
         public static async Task Adicionar(Moto moto)

@@ -6,18 +6,24 @@ namespace Locadora_de_motos_MotoRent.Modelo
     {
         public int Id { get; set; }
 
-       public string Email { get; set; }
+        public string Marca { get; set; } = string.Empty;
 
-        public decimal Salario { get; set; }
+        public string Modelo { get; set; } = string.Empty;
 
-        public char Sexo { get; set; }
+        public int Ano { get; set; }
 
-        public string TipoContrato { get; set; }
+        public string Placa { get; set; } = string.Empty;
+
+        public string Categoria { get; set; } = string.Empty;
+
+        public decimal ValorDiaria { get; set; }
+
+        public string Status { get; set; } = string.Empty;
 
         public DateTime DataCadastro { get; set; }
 
         public DateTime? DataAtualizacao { get; set; }
-
-        
     }
+
 }
+

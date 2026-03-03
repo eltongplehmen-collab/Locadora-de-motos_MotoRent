@@ -69,7 +69,7 @@
             // btnAlugar
             // 
             btnAlugar.BackColor = Color.FromArgb(255, 224, 192);
-            btnAlugar.Location = new Point(255, 470);
+            btnAlugar.Location = new Point(246, 703);
             btnAlugar.Name = "btnAlugar";
             btnAlugar.Size = new Size(94, 25);
             btnAlugar.TabIndex = 31;
@@ -79,7 +79,7 @@
             // btnLimpar
             // 
             btnLimpar.BackColor = Color.FromArgb(255, 224, 192);
-            btnLimpar.Location = new Point(24, 470);
+            btnLimpar.Location = new Point(15, 703);
             btnLimpar.Name = "btnLimpar";
             btnLimpar.Size = new Size(94, 25);
             btnLimpar.TabIndex = 30;
@@ -126,7 +126,7 @@
             // btnBuscar
             // 
             btnBuscar.BackColor = Color.FromArgb(255, 224, 192);
-            btnBuscar.Location = new Point(144, 470);
+            btnBuscar.Location = new Point(135, 703);
             btnBuscar.Name = "btnBuscar";
             btnBuscar.Size = new Size(94, 25);
             btnBuscar.TabIndex = 19;
@@ -198,7 +198,7 @@
             // btnSair
             // 
             btnSair.BackColor = Color.FromArgb(255, 224, 192);
-            btnSair.Location = new Point(405, 470);
+            btnSair.Location = new Point(396, 703);
             btnSair.Name = "btnSair";
             btnSair.Size = new Size(94, 25);
             btnSair.TabIndex = 44;
@@ -211,7 +211,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ActiveCaption;
-            ClientSize = new Size(502, 504);
+            ClientSize = new Size(502, 740);
             Controls.Add(btnSair);
             Controls.Add(dataGridView1);
             Controls.Add(txtCPF);

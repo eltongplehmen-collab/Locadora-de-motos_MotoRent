@@ -22,31 +22,16 @@ namespace Locadora_de_motos_MotoRent.Frm
         public FrmMotos()
         {
             InitializeComponent();
+
+
+            Load += FrmMotos_Load;
+
+
         }
 
-        private void FrmMotos_Load(object sender, EventArgs e)
+        private async void FrmMotos_Load(object sender, EventArgs e)
         {
-
-        }
-
-        private void btnListar_Click(object sender, EventArgs e)
-        {
-            ListarMotos();
-        }
-
-        private void ListarMotos()
-        {
-            List<string> motos = new List<string>()
-    {
-                "Honda CB 500",
-                "Yamaha MT-07",
-                "Kawasaki Ninja 400",
-                "BMW S1000RR"
-    };
-
-            dgvMotos.DataSource = motos;
-
-
+            await AtualizarTabela();
         }
 
         private async Task btnExcluir_Click(object sender, EventArgs e)
@@ -54,7 +39,7 @@ namespace Locadora_de_motos_MotoRent.Frm
 
             string nomeMotos = dgvMotos.SelectedRows[0].Cells[1].Value.ToString();
 
-            var retorno = MessageBox.Show($"Tem certeza que deseja excluir o funcionario {nomeMotos}?", "Exclusão funcionário", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            var retorno = MessageBox.Show($"Tem certeza que deseja excluir a moto? {nomeMotos}?", "Exclusão Moto", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
             if (retorno == DialogResult.Yes)
             {
@@ -62,8 +47,8 @@ namespace Locadora_de_motos_MotoRent.Frm
 
                 await MotosRepository.Deletar(idMotos);
 
-                MessageBox.Show($"O funcionário {nomeMotos} foi deletado com sucesso!",
-                    "Exclusão funcionário",
+                MessageBox.Show($" {nomeMotos} !",
+                    "Exclusão ",
                     MessageBoxButtons.OK,
                     MessageBoxIcon.Exclamation);
 
@@ -71,39 +56,14 @@ namespace Locadora_de_motos_MotoRent.Frm
             }
         }
 
-        private void AtualizarTabela()
+        public async Task AtualizarTabela()
         {
+            var motos = await MotosRepository.ObterTodas();
 
+            dgvMotos.DataSource = new BindingList<Moto>(motos.ToList());
         }
 
-        private void Deletar(object idMotos)
-        {
-            throw new NotImplementedException();
-        }
-
-
-        public class Moto
-        {
-            public string Marca { get; set; }
-            public string Modelo { get; set; }
-            public int Ano { get; set; }
-            public double Preco { get; set; }
-
-            
-        }
-
-
-        private void btnCadastrar_Click(object sender, EventArgs e)
-        {
-            Moto moto = new Moto()
-            {
-                Marca = txtMarca.Text,
-                Modelo = txtModelo.Text,
-                Ano = int.Parse(txtAno.Text),
-                Preco = double.Parse(txtPreco.Text)
-            };
-
-        }
+       
     }
 }
 
