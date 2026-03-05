@@ -28,13 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            btnListar = new Button();
-            txtIdMoto = new TextBox();
+            btnRevisar = new Button();
             txtModelo = new TextBox();
             txtMarca = new TextBox();
             txtValorDiaria = new TextBox();
             dgvMotos = new DataGridView();
-            label1 = new Label();
             label2 = new Label();
             label3 = new Label();
             label4 = new Label();
@@ -54,39 +52,33 @@
             ((System.ComponentModel.ISupportInitialize)dgvMotos).BeginInit();
             SuspendLayout();
             // 
-            // btnListar
+            // btnRevisar
             // 
-            btnListar.Location = new Point(11, 569);
-            btnListar.Name = "btnListar";
-            btnListar.Size = new Size(84, 26);
-            btnListar.TabIndex = 1;
-            btnListar.Text = "Listar";
-            btnListar.UseVisualStyleBackColor = true;
-            // 
-            // txtIdMoto
-            // 
-            txtIdMoto.Location = new Point(12, 33);
-            txtIdMoto.Name = "txtIdMoto";
-            txtIdMoto.Size = new Size(100, 23);
-            txtIdMoto.TabIndex = 2;
+            btnRevisar.Location = new Point(18, 469);
+            btnRevisar.Name = "btnRevisar";
+            btnRevisar.Size = new Size(84, 26);
+            btnRevisar.TabIndex = 1;
+            btnRevisar.Text = "Revisar";
+            btnRevisar.UseVisualStyleBackColor = true;
+            btnRevisar.Click += btnRevisar_Click;
             // 
             // txtModelo
             // 
-            txtModelo.Location = new Point(12, 143);
+            txtModelo.Location = new Point(12, 93);
             txtModelo.Name = "txtModelo";
             txtModelo.Size = new Size(100, 23);
             txtModelo.TabIndex = 3;
             // 
             // txtMarca
             // 
-            txtMarca.Location = new Point(12, 88);
+            txtMarca.Location = new Point(12, 38);
             txtMarca.Name = "txtMarca";
             txtMarca.Size = new Size(100, 23);
             txtMarca.TabIndex = 4;
             // 
             // txtValorDiaria
             // 
-            txtValorDiaria.Location = new Point(12, 359);
+            txtValorDiaria.Location = new Point(12, 309);
             txtValorDiaria.Name = "txtValorDiaria";
             txtValorDiaria.Size = new Size(100, 23);
             txtValorDiaria.TabIndex = 5;
@@ -99,21 +91,11 @@
             dgvMotos.Size = new Size(588, 606);
             dgvMotos.TabIndex = 7;
             // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.BackColor = Color.White;
-            label1.Location = new Point(12, 15);
-            label1.Name = "label1";
-            label1.Size = new Size(20, 15);
-            label1.TabIndex = 8;
-            label1.Text = "Id:";
-            // 
             // label2
             // 
             label2.AutoSize = true;
             label2.BackColor = Color.White;
-            label2.Location = new Point(12, 125);
+            label2.Location = new Point(12, 75);
             label2.Name = "label2";
             label2.Size = new Size(51, 15);
             label2.TabIndex = 9;
@@ -123,7 +105,7 @@
             // 
             label3.AutoSize = true;
             label3.BackColor = Color.White;
-            label3.Location = new Point(12, 70);
+            label3.Location = new Point(12, 20);
             label3.Name = "label3";
             label3.Size = new Size(43, 15);
             label3.TabIndex = 10;
@@ -133,7 +115,7 @@
             // 
             label4.AutoSize = true;
             label4.BackColor = Color.White;
-            label4.Location = new Point(12, 341);
+            label4.Location = new Point(12, 291);
             label4.Name = "label4";
             label4.Size = new Size(69, 15);
             label4.TabIndex = 11;
@@ -141,36 +123,39 @@
             // 
             // btnExcluir
             // 
-            btnExcluir.Location = new Point(11, 601);
+            btnExcluir.Location = new Point(18, 501);
             btnExcluir.Name = "btnExcluir";
             btnExcluir.Size = new Size(84, 26);
             btnExcluir.TabIndex = 12;
             btnExcluir.Text = "Excluir";
             btnExcluir.UseVisualStyleBackColor = true;
+            btnExcluir.Click += btnExcluir_Click;
             // 
             // btnCadastrar
             // 
-            btnCadastrar.Location = new Point(112, 569);
+            btnCadastrar.Location = new Point(119, 469);
             btnCadastrar.Name = "btnCadastrar";
             btnCadastrar.Size = new Size(84, 26);
             btnCadastrar.TabIndex = 13;
             btnCadastrar.Text = "Cadastrar";
             btnCadastrar.UseVisualStyleBackColor = true;
+            btnCadastrar.Click += btnCadastrar_Click;
             // 
             // btnAtualizacao
             // 
-            btnAtualizacao.Location = new Point(112, 601);
+            btnAtualizacao.Location = new Point(119, 501);
             btnAtualizacao.Name = "btnAtualizacao";
             btnAtualizacao.Size = new Size(84, 26);
             btnAtualizacao.TabIndex = 14;
             btnAtualizacao.Text = "Atualização";
             btnAtualizacao.UseVisualStyleBackColor = true;
+            btnAtualizacao.Click += btnAtualizacao_Click;
             // 
             // label5
             // 
             label5.AutoSize = true;
             label5.BackColor = Color.White;
-            label5.Location = new Point(12, 181);
+            label5.Location = new Point(12, 131);
             label5.Name = "label5";
             label5.Size = new Size(32, 15);
             label5.TabIndex = 18;
@@ -178,7 +163,7 @@
             // 
             // txtAno
             // 
-            txtAno.Location = new Point(12, 199);
+            txtAno.Location = new Point(12, 149);
             txtAno.Name = "txtAno";
             txtAno.Size = new Size(100, 23);
             txtAno.TabIndex = 16;
@@ -187,7 +172,7 @@
             // 
             label7.AutoSize = true;
             label7.BackColor = Color.White;
-            label7.Location = new Point(12, 237);
+            label7.Location = new Point(12, 187);
             label7.Name = "label7";
             label7.Size = new Size(38, 15);
             label7.TabIndex = 19;
@@ -195,7 +180,7 @@
             // 
             // txtPlaca
             // 
-            txtPlaca.Location = new Point(12, 255);
+            txtPlaca.Location = new Point(12, 205);
             txtPlaca.Name = "txtPlaca";
             txtPlaca.Size = new Size(100, 23);
             txtPlaca.TabIndex = 20;
@@ -204,7 +189,7 @@
             // 
             label8.AutoSize = true;
             label8.BackColor = Color.White;
-            label8.Location = new Point(14, 290);
+            label8.Location = new Point(14, 240);
             label8.Name = "label8";
             label8.Size = new Size(61, 15);
             label8.TabIndex = 21;
@@ -212,7 +197,7 @@
             // 
             // txtCategoria
             // 
-            txtCategoria.Location = new Point(12, 308);
+            txtCategoria.Location = new Point(12, 258);
             txtCategoria.Name = "txtCategoria";
             txtCategoria.Size = new Size(100, 23);
             txtCategoria.TabIndex = 22;
@@ -221,7 +206,7 @@
             // 
             label9.AutoSize = true;
             label9.BackColor = Color.White;
-            label9.Location = new Point(14, 388);
+            label9.Location = new Point(14, 338);
             label9.Name = "label9";
             label9.Size = new Size(42, 15);
             label9.TabIndex = 23;
@@ -229,21 +214,21 @@
             // 
             // txtStatus
             // 
-            txtStatus.Location = new Point(12, 406);
+            txtStatus.Location = new Point(12, 356);
             txtStatus.Name = "txtStatus";
             txtStatus.Size = new Size(100, 23);
             txtStatus.TabIndex = 24;
             // 
             // dtCadastro
             // 
-            dtCadastro.Location = new Point(12, 444);
+            dtCadastro.Location = new Point(12, 394);
             dtCadastro.Name = "dtCadastro";
             dtCadastro.Size = new Size(200, 23);
             dtCadastro.TabIndex = 25;
             // 
             // dtAtualizacao
             // 
-            dtAtualizacao.Location = new Point(12, 487);
+            dtAtualizacao.Location = new Point(12, 437);
             dtAtualizacao.Name = "dtAtualizacao";
             dtAtualizacao.Size = new Size(200, 23);
             dtAtualizacao.TabIndex = 26;
@@ -270,13 +255,11 @@
             Controls.Add(label4);
             Controls.Add(label3);
             Controls.Add(label2);
-            Controls.Add(label1);
             Controls.Add(dgvMotos);
             Controls.Add(txtValorDiaria);
             Controls.Add(txtMarca);
             Controls.Add(txtModelo);
-            Controls.Add(txtIdMoto);
-            Controls.Add(btnListar);
+            Controls.Add(btnRevisar);
             Name = "FrmMotos";
             Text = "FrmMotos";
             ((System.ComponentModel.ISupportInitialize)dgvMotos).EndInit();
@@ -286,13 +269,11 @@
 
         #endregion
 
-        private Button btnListar;
-        private TextBox txtIdMoto;
+        private Button btnRevisar;
         private TextBox txtModelo;
         private TextBox txtMarca;
         private TextBox txtValorDiaria;
         private DataGridView dgvMotos;
-        private Label label1;
         private Label label2;
         private Label label3;
         private Label label4;

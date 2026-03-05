@@ -1,4 +1,8 @@
-﻿using Dapper;
+﻿using System.ComponentModel;
+using System.Data.SqlClient;
+using System.Security.Cryptography.X509Certificates;
+using System.Windows.Forms;
+using Dapper;
 using Locadora_de_motos_MotoRent.Banco.Configuração;
 using Locadora_de_motos_MotoRent.Modelo;
 
@@ -85,13 +89,80 @@ namespace Locadora_de_motos_MotoRent.Banco.Repositories
 
             await conexao.ExecuteAsync(
                 @"DELETE FROM Motos
-                  WHERE Id = @Id",
+                  WHERE Id = @Id",  
                 new { Id = idMoto });
         }
 
-        internal static void Deletar(object idMotos)
+        public static async Task<int> ColocarEmRevisao(int id)
         {
-            throw new NotImplementedException();
+            using (SqlConnection conexao = (SqlConnection)conexaoBanco.CriarConexao())
+            {
+                string sql = @"UPDATE Motos
+                               SET Status = @Status,
+                                   DataAtualizacao = GETDATE()
+                               WHERE Id = @Id";
+
+                return await conexao.ExecuteAsync(sql, new
+                {
+                    Id = id,
+                    Status = "Em Revisão"
+                });
+            }
+        }
+
+        public static async Task<int> Cadastrar(Moto moto)
+        {
+            using (SqlConnection conexao = (SqlConnection)conexaoBanco.CriarConexao())
+            {
+                string sql = @"INSERT INTO Motos
+                               (Marca, Modelo, Ano, Placa, Categoria, ValorDiaria, Status, DataCadastro, DataAtualizacao)
+                               VALUES
+                               (@Marca, @Modelo, @Ano, @Placa, @Categoria, @ValorDiaria, @Status, GETDATE(), GETDATE())";
+
+                return await conexao.ExecuteAsync(sql, moto);
+            }
+
+        }
+
+        public static async Task<IEnumerable<Moto>> ListarTodas()
+        {
+            using (SqlConnection conexao = (SqlConnection)conexaoBanco.CriarConexao())
+            {
+                string sql = "SELECT * FROM Motos ORDER BY Id DESC";
+                return await conexao.QueryAsync<Moto>(sql);
+            }
+        }
+
+        public static async Task<int> Excluir(int id)
+        {
+            using (SqlConnection conexao = (SqlConnection)conexaoBanco.CriarConexao())
+            {
+                string sql = "DELETE FROM Motos WHERE Id = @Id";
+                return await conexao.ExecuteAsync(sql, new { Id = id });
+            }
+        }
+
+
+        public static async Task<Moto> BuscarPorPlaca(string placa)
+        {
+            using (SqlConnection conexao = (SqlConnection)conexaoBanco.CriarConexao())
+            {
+                string sql = "SELECT * FROM Motos WHERE Placa = @Placa";
+                return await conexao.QueryFirstOrDefaultAsync<Moto>(sql, new { Placa = placa });
+            }
+        }
+
+        public static async Task<int> AtualizarStatus(int id, string status)
+        {
+            using (SqlConnection conexao = (SqlConnection)conexaoBanco.CriarConexao())
+            {
+                string sql = @"UPDATE Motos
+                       SET Status = @Status,
+                           DataAtualizacao = GETDATE()
+                       WHERE Id = @Id";
+
+                return await conexao.ExecuteAsync(sql, new { Id = id, Status = status });
+            }
         }
     }
 }

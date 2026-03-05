@@ -28,58 +28,58 @@
         /// </summary>
         private void InitializeComponent()
         {
-            dataGridView1 = new DataGridView();
-            textBox1 = new TextBox();
-            textBox2 = new TextBox();
-            textBox4 = new TextBox();
-            textBox5 = new TextBox();
+            dgvRevisar = new DataGridView();
+            txtEmail = new TextBox();
+            txtTelefone = new TextBox();
+            txtCPF = new TextBox();
+            txtNome = new TextBox();
             label1 = new Label();
             label2 = new Label();
             label3 = new Label();
             label4 = new Label();
-            dateTimePicker1 = new DateTimePicker();
-            label5 = new Label();
             btnCadastrar = new Button();
             btnRevisar = new Button();
             btnSair = new Button();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            txtCNH = new TextBox();
+            label6 = new Label();
+            ((System.ComponentModel.ISupportInitialize)dgvRevisar).BeginInit();
             SuspendLayout();
             // 
-            // dataGridView1
+            // dgvRevisar
             // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(373, -1);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.Size = new Size(240, 569);
-            dataGridView1.TabIndex = 0;
+            dgvRevisar.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvRevisar.Location = new Point(233, 12);
+            dgvRevisar.Name = "dgvRevisar";
+            dgvRevisar.Size = new Size(367, 546);
+            dgvRevisar.TabIndex = 0;
             // 
-            // textBox1
+            // txtEmail
             // 
-            textBox1.Location = new Point(12, 87);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(100, 23);
-            textBox1.TabIndex = 1;
+            txtEmail.Location = new Point(12, 87);
+            txtEmail.Name = "txtEmail";
+            txtEmail.Size = new Size(100, 23);
+            txtEmail.TabIndex = 1;
             // 
-            // textBox2
+            // txtTelefone
             // 
-            textBox2.Location = new Point(12, 149);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(100, 23);
-            textBox2.TabIndex = 2;
+            txtTelefone.Location = new Point(12, 149);
+            txtTelefone.Name = "txtTelefone";
+            txtTelefone.Size = new Size(100, 23);
+            txtTelefone.TabIndex = 2;
             // 
-            // textBox4
+            // txtCPF
             // 
-            textBox4.Location = new Point(12, 204);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(100, 23);
-            textBox4.TabIndex = 3;
+            txtCPF.Location = new Point(12, 204);
+            txtCPF.Name = "txtCPF";
+            txtCPF.Size = new Size(100, 23);
+            txtCPF.TabIndex = 3;
             // 
-            // textBox5
+            // txtNome
             // 
-            textBox5.Location = new Point(12, 31);
-            textBox5.Name = "textBox5";
-            textBox5.Size = new Size(100, 23);
-            textBox5.TabIndex = 5;
+            txtNome.Location = new Point(12, 31);
+            txtNome.Name = "txtNome";
+            txtNome.Size = new Size(100, 23);
+            txtNome.TabIndex = 5;
             // 
             // label1
             // 
@@ -121,44 +121,29 @@
             label4.TabIndex = 9;
             label4.Text = "CPF:";
             // 
-            // dateTimePicker1
-            // 
-            dateTimePicker1.Location = new Point(12, 270);
-            dateTimePicker1.Name = "dateTimePicker1";
-            dateTimePicker1.Size = new Size(200, 23);
-            dateTimePicker1.TabIndex = 10;
-            // 
-            // label5
-            // 
-            label5.AutoSize = true;
-            label5.BackColor = Color.White;
-            label5.Location = new Point(12, 252);
-            label5.Name = "label5";
-            label5.Size = new Size(27, 15);
-            label5.TabIndex = 11;
-            label5.Text = "DN:";
-            // 
             // btnCadastrar
             // 
-            btnCadastrar.Location = new Point(12, 372);
+            btnCadastrar.Location = new Point(12, 361);
             btnCadastrar.Name = "btnCadastrar";
             btnCadastrar.Size = new Size(114, 36);
             btnCadastrar.TabIndex = 12;
             btnCadastrar.Text = "Cadastrar";
             btnCadastrar.UseVisualStyleBackColor = true;
+            btnCadastrar.Click += btnCadastrar_Click;
             // 
             // btnRevisar
             // 
-            btnRevisar.Location = new Point(12, 325);
+            btnRevisar.Location = new Point(12, 314);
             btnRevisar.Name = "btnRevisar";
             btnRevisar.Size = new Size(114, 36);
             btnRevisar.TabIndex = 13;
             btnRevisar.Text = "Revisar:";
             btnRevisar.UseVisualStyleBackColor = true;
+            btnRevisar.Click += btnRevisar_Click;
             // 
             // btnSair
             // 
-            btnSair.Location = new Point(12, 520);
+            btnSair.Location = new Point(12, 785);
             btnSair.Name = "btnSair";
             btnSair.Size = new Size(114, 36);
             btnSair.TabIndex = 14;
@@ -166,48 +151,65 @@
             btnSair.UseVisualStyleBackColor = true;
             btnSair.Click += btnSair_Click;
             // 
+            // txtCNH
+            // 
+            txtCNH.Location = new Point(12, 261);
+            txtCNH.Name = "txtCNH";
+            txtCNH.Size = new Size(100, 23);
+            txtCNH.TabIndex = 15;
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.BackColor = Color.White;
+            label6.Location = new Point(12, 243);
+            label6.Name = "label6";
+            label6.Size = new Size(36, 15);
+            label6.TabIndex = 18;
+            label6.Text = "CNH:";
+            // 
             // FrmCadastrar
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ActiveCaption;
-            ClientSize = new Size(612, 568);
+            ClientSize = new Size(612, 831);
+            Controls.Add(label6);
+            Controls.Add(txtCNH);
             Controls.Add(btnSair);
             Controls.Add(btnRevisar);
             Controls.Add(btnCadastrar);
-            Controls.Add(label5);
-            Controls.Add(dateTimePicker1);
             Controls.Add(label4);
             Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(label1);
-            Controls.Add(textBox5);
-            Controls.Add(textBox4);
-            Controls.Add(textBox2);
-            Controls.Add(textBox1);
-            Controls.Add(dataGridView1);
+            Controls.Add(txtNome);
+            Controls.Add(txtCPF);
+            Controls.Add(txtTelefone);
+            Controls.Add(txtEmail);
+            Controls.Add(dgvRevisar);
             Name = "FrmCadastrar";
             Text = "FrmCadastrar";
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dgvRevisar).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
 
-        private DataGridView dataGridView1;
-        private TextBox textBox1;
-        private TextBox textBox2;
-        private TextBox textBox4;
-        private TextBox textBox5;
+        private DataGridView dgvRevisar;
+        private TextBox txtEmail;
+        private TextBox txtTelefone;
+        private TextBox txtCPF;
+        private TextBox txtNome;
         private Label label1;
         private Label label2;
         private Label label3;
         private Label label4;
-        private DateTimePicker dateTimePicker1;
-        private Label label5;
         private Button btnCadastrar;
         private Button btnRevisar;
         private Button btnSair;
+        private TextBox txtCNH;
+        private Label label6;
     }
 }

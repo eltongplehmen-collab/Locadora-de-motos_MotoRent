@@ -53,6 +53,7 @@
             btnListar.TabIndex = 1;
             btnListar.Text = "Listar";
             btnListar.UseVisualStyleBackColor = true;
+            btnListar.Click += btnListar_Click;
             // 
             // btnSair
             // 
@@ -81,6 +82,7 @@
             btnCadastrar.TabIndex = 4;
             btnCadastrar.Text = "Cadastrar";
             btnCadastrar.UseVisualStyleBackColor = true;
+            btnCadastrar.Click += btnCadastrar_Click;
             // 
             // btnExcluir
             // 

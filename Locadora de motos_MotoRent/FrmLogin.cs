@@ -1,5 +1,5 @@
 using Locadora_de_motos_MotoRent.Frm;
-
+using Locadora_de_motos_MotoRent.Util;
 namespace Locadora_de_motos_MotoRent
 {
     public partial class FrmLogin : Form
@@ -10,6 +10,7 @@ namespace Locadora_de_motos_MotoRent
         }
         private void btnAdministrador_Click(object sender, EventArgs e)
         {
+            
             var FrmtelaLoginAdminstrador = new FrmTelaLoginAdministrador();
             this.Hide();
             FrmtelaLoginAdminstrador.ShowDialog();

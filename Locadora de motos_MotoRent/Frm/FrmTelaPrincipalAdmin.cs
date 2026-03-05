@@ -62,6 +62,12 @@ namespace Locadora_de_motos_MotoRent.Frm
             FrmCadastrar tela = new FrmCadastrar();
             tela.Show();
         }
+
+        private void btnCadastros_Click(object sender, EventArgs e)
+        {
+            FrmCadastros tela = new FrmCadastros();
+            tela.Show();
+        }
     }
 }
 

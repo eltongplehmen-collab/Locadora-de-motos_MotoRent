@@ -30,7 +30,6 @@
         {
             btnDevolucao = new Button();
             btnSair = new Button();
-            btnCadastros = new Button();
             btnAlugar = new Button();
             SuspendLayout();
             // 
@@ -48,7 +47,7 @@
             // btnSair
             // 
             btnSair.BackColor = Color.IndianRed;
-            btnSair.Location = new Point(134, 298);
+            btnSair.Location = new Point(123, 195);
             btnSair.Name = "btnSair";
             btnSair.Size = new Size(132, 42);
             btnSair.TabIndex = 8;
@@ -56,21 +55,10 @@
             btnSair.UseVisualStyleBackColor = false;
             btnSair.Click += btnSair_Click;
             // 
-            // btnCadastros
-            // 
-            btnCadastros.BackColor = Color.Beige;
-            btnCadastros.Location = new Point(103, 109);
-            btnCadastros.Name = "btnCadastros";
-            btnCadastros.Size = new Size(180, 55);
-            btnCadastros.TabIndex = 9;
-            btnCadastros.Text = "Cadastros";
-            btnCadastros.UseVisualStyleBackColor = false;
-            btnCadastros.Click += btnCadastros_Click;
-            // 
             // btnAlugar
             // 
             btnAlugar.BackColor = Color.Beige;
-            btnAlugar.Location = new Point(103, 202);
+            btnAlugar.Location = new Point(103, 108);
             btnAlugar.Name = "btnAlugar";
             btnAlugar.Size = new Size(180, 55);
             btnAlugar.TabIndex = 10;
@@ -83,9 +71,8 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ActiveCaption;
-            ClientSize = new Size(398, 537);
+            ClientSize = new Size(398, 289);
             Controls.Add(btnAlugar);
-            Controls.Add(btnCadastros);
             Controls.Add(btnSair);
             Controls.Add(btnDevolucao);
             Name = "FrmTelaPrincipalUsuario";
@@ -97,7 +84,6 @@
 
         private Button btnDevolucao;
         private Button btnSair;
-        private Button btnCadastros;
         private Button btnAlugar;
     }
 }

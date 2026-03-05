@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Locadora_de_motos_MotoRent.Util;
 
 namespace Locadora_de_motos_MotoRent.Frm
 {
@@ -21,6 +22,7 @@ namespace Locadora_de_motos_MotoRent.Frm
         {
             if (txtUsuario.Text == "Admin" && txtSenha.Text == "1234")
             {
+                string senhaHash = Criptografia.GerarHash(txtSenha.Text);
                 var FrmTelaPrincipal = new FrmTelaPrincipalAdmin(true, 0);
                 this.Hide();
                 FrmTelaPrincipal.ShowDialog();

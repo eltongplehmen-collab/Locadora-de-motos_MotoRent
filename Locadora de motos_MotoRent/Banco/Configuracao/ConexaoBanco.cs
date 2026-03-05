@@ -9,5 +9,9 @@ namespace Locadora_de_motos_MotoRent.Banco.Configuração
         {
             return new SqlConnection("Server=(localdb)\\MSSQLLocalDB; Database= locadora_motos; Trusted_Connection=True;");
         }
+
+         
+
+       
     }
 }

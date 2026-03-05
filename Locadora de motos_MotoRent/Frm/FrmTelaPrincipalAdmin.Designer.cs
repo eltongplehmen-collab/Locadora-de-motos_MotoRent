@@ -34,6 +34,7 @@
             btnDevolucao = new Button();
             btnSair = new Button();
             btnCadastrar = new Button();
+            btnCadastros = new Button();
             SuspendLayout();
             // 
             // btnMotos
@@ -83,7 +84,7 @@
             // btnSair
             // 
             btnSair.BackColor = Color.IndianRed;
-            btnSair.Location = new Point(120, 477);
+            btnSair.Location = new Point(115, 516);
             btnSair.Name = "btnSair";
             btnSair.Size = new Size(132, 42);
             btnSair.TabIndex = 4;
@@ -102,12 +103,24 @@
             btnCadastrar.UseVisualStyleBackColor = false;
             btnCadastrar.Click += btnCadastrar_Click_1;
             // 
+            // btnCadastros
+            // 
+            btnCadastros.BackColor = Color.Beige;
+            btnCadastros.Location = new Point(86, 434);
+            btnCadastros.Name = "btnCadastros";
+            btnCadastros.Size = new Size(180, 55);
+            btnCadastros.TabIndex = 10;
+            btnCadastros.Text = "Cadastros";
+            btnCadastros.UseVisualStyleBackColor = false;
+            btnCadastros.Click += btnCadastros_Click;
+            // 
             // FrmTelaPrincipalAdmin
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ActiveCaption;
             ClientSize = new Size(364, 585);
+            Controls.Add(btnCadastros);
             Controls.Add(btnCadastrar);
             Controls.Add(btnSair);
             Controls.Add(btnDevolucao);
@@ -128,5 +141,6 @@
         private Button btnDevolucao;
         private Button btnSair;
         private Button btnCadastrar;
+        private Button btnCadastros;
     }
 }
