@@ -41,24 +41,31 @@ namespace Locadora_de_motos_MotoRent.Frm
 
         private async void btnBuscar_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(txtPlaca.Text))
+            string placa = txtPlaca.Text.Trim();
+
+            if (string.IsNullOrWhiteSpace(placa))
             {
                 MessageBox.Show("Digite a placa!");
                 return;
             }
 
-            var moto = await MotosRepository.BuscarPorPlaca(txtPlaca.Text);
-
-            if (moto == null)
+            try
             {
-                MessageBox.Show("Moto não encontrada!");
-                return;
-            }
+                var moto = await MotosRepository.BuscarPorPlaca(placa);
 
-            txtValorDiaria.Text = moto.ValorDiaria.ToString("F2");
+                if (moto == null)
+                {
+                    MessageBox.Show("Moto não encontrada!");
+                    return;
+                }
 
-            if (lblStatus != null)
+                txtValorDiaria.Text = moto.ValorDiaria.ToString("F2");
                 lblStatus.Text = moto.Status;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro ao buscar moto: " + ex.Message);
+            }   
         }
 
         private async void btnAlugar_Click(object sender, EventArgs e)

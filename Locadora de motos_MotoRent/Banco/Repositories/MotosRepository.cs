@@ -164,5 +164,10 @@ namespace Locadora_de_motos_MotoRent.Banco.Repositories
                 return await conexao.ExecuteAsync(sql, new { Id = id, Status = status });
             }
         }
+
+        internal static async Task<Moto?> BuscarPorId(int id)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

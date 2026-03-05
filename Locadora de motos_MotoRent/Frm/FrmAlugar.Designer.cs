@@ -31,18 +31,18 @@
             btnAlugar = new Button();
             btnLimpar = new Button();
             btnBuscar = new Button();
-            dataGridView1 = new DataGridView();
+            dgvAlugar = new DataGridView();
             btnSair = new Button();
             txtPlaca = new TextBox();
             txtClienteId = new TextBox();
-            textBox2 = new TextBox();
+            txtValorDiaria = new TextBox();
             label2 = new Label();
             label3 = new Label();
             label4 = new Label();
             dtpInicio = new DateTimePicker();
             dtpFim = new DateTimePicker();
             lblStatus = new Label();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dgvAlugar).BeginInit();
             SuspendLayout();
             // 
             // btnAlugar
@@ -78,13 +78,13 @@
             btnBuscar.UseVisualStyleBackColor = false;
             btnBuscar.Click += btnBuscar_Click;
             // 
-            // dataGridView1
+            // dgvAlugar
             // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(218, 19);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.Size = new Size(525, 422);
-            dataGridView1.TabIndex = 43;
+            dgvAlugar.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvAlugar.Location = new Point(218, 19);
+            dgvAlugar.Name = "dgvAlugar";
+            dgvAlugar.Size = new Size(525, 422);
+            dgvAlugar.TabIndex = 43;
             // 
             // btnSair
             // 
@@ -111,12 +111,12 @@
             txtClienteId.Size = new Size(100, 23);
             txtClienteId.TabIndex = 46;
             // 
-            // textBox2
+            // txtValorDiaria
             // 
-            textBox2.Location = new Point(15, 140);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(100, 23);
-            textBox2.TabIndex = 47;
+            txtValorDiaria.Location = new Point(15, 140);
+            txtValorDiaria.Name = "txtValorDiaria";
+            txtValorDiaria.Size = new Size(100, 23);
+            txtValorDiaria.TabIndex = 47;
             // 
             // label2
             // 
@@ -185,17 +185,17 @@
             Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(lblStatus);
-            Controls.Add(textBox2);
+            Controls.Add(txtValorDiaria);
             Controls.Add(txtClienteId);
             Controls.Add(txtPlaca);
             Controls.Add(btnSair);
-            Controls.Add(dataGridView1);
+            Controls.Add(dgvAlugar);
             Controls.Add(btnAlugar);
             Controls.Add(btnLimpar);
             Controls.Add(btnBuscar);
             Name = "FrmAlugar";
             Text = "FrmAlugar";
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dgvAlugar).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -206,14 +206,14 @@
         private Button btnLimpar;
         private DataGridView dgvMotos;
         private ComboBox cmbStatus;
-        private TextBox txtValorDiaria;
+       
         private TextBox txtIdMoto;
         private Button btnBuscar;
-        private DataGridView dataGridView1;
+        private DataGridView dgvAlugar;
         private Button btnSair;
         private TextBox txtPlaca;
         private TextBox txtClienteId;
-        private TextBox textBox2;
+        private TextBox txtValorDiaria;
         private Label label2;
         private Label label3;
         private Label label4;
